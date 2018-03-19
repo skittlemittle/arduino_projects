@@ -19,7 +19,6 @@ Arduino     |     Pir sensor
 pin 13      |     LED
 pin 2       |     Input from the Pir sensor
 
-==========================================================
 
 ## roamer
 
@@ -49,5 +48,3 @@ Arduino     |     HC-SR04
 ------------|-----------------
 pin 12      |     Trigger (ping)
 pin 11      |     Echo (input)
-
-==========================================================
