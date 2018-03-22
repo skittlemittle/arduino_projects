@@ -2,15 +2,64 @@
 A set of projects made to teach Arduino.
 
 ## Blinking an LED:
+Blinks an LED with one second intervals.
+
+**Parts:**
+
+* An Arduino.
+* An LED (optional, Arduinos have one already).
+
+**Wiring**
+
+Arduino      |     LED
+-------------|-------------
+Pin 13       |     Anode(power)
+GND          |     Cathode(ground)
 
 ## LED waves:
+Turns on and off LED's in a sequence making a wave.
+
+**Parts:**
+
+* An Arduino.
+* 6 LED's.
+
+**Wiring**
+
+Arduino      |     LEDS
+-------------|-------------
+Pin 3        |     LED 1
+Pin 5        |     LED 2
+Pin 6        |     LED 3
+Pin 9        |     LED 4
+Pin 10       |     LED 5
+Pin 11       |     LED 6
+GND          |     GND
 
 ## Interfacing with buttons:
+Turn on and off an LED with a button.
+
+**Parts:**
+
+* An Arduino.
+* A button.
+* An LED.
+
+**Wiring**
+
+Arduino     |     Button
+------------|--------------
+Pin         |     Pin 1
+PWR         |     Pin 2
+
+Arduino     |     LED
+------------|--------------
+Pin         |     Power
+GND         |     GND
 
 ## Using motors:
 
 ## A motion alarm:
-
 Senses motion, triggers an alarm; put it in random doorways
 and wait for your victims to be [bamboozled](https://pics.onsizzle.com/you-thought-was-slug-but-was-dogco-bamboozled-again-always-6281922.png)
 
@@ -29,7 +78,6 @@ pin 2       |     Input from the Pir sensor
 
 
 ## roamer:
-
 A robot car with an ultrasonic sensor that avoids objects in front of it.
 
 **Parts:**
