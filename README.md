@@ -1,5 +1,5 @@
 # Arduino Projects
-A set of projects made to teach Arduino.
+A few projects made to teach Arduino.
 
 ## Blinking an LED:
 Blinks an LED with one second intervals.
@@ -26,7 +26,7 @@ Turns on and off LED's in a sequence making a wave.
 
 **Wiring**
 
-Arduino      |     LEDS
+Arduino      |     LED's
 -------------|-------------
 Pin 3        |     LED 1
 Pin 5        |     LED 2
@@ -61,7 +61,7 @@ GND         |     GND
 
 ## A motion alarm:
 Senses motion, triggers an alarm; put it in random doorways
-and wait for your victims to be [bamboozled](https://pics.onsizzle.com/you-thought-was-slug-but-was-dogco-bamboozled-again-always-6281922.png)
+and wait for your victims to be [bamboozled.](https://pics.onsizzle.com/you-thought-was-slug-but-was-dogco-bamboozled-again-always-6281922.png)
 
 **Parts:**
 

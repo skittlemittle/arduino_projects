@@ -1,7 +1,21 @@
 // turns on and then off, a line of LED's one after the other, making a wave
 
+//set up the variables for the leds
+const int LED1 = 3;
+const int LED2 = 5;
+const int LED3 = 6;
+const int LED4 = 9;
+const int LED5 = 10;
+const int LED6 = 11;
+
+//set all the led pins as outputs
 void setup() {
-  // no need to set up pins they are outputs by default.
+  pinMode(LED1, OUTPUT);
+  pinMode(LED2, OUTPUT);
+  pinMode(LED3, OUTPUT);
+  pinMode(LED4, OUTPUT);
+  pinMode(LED5, OUTPUT);
+  pinMode(LED6, OUTPUT);
 }
 
 /*
@@ -10,28 +24,28 @@ void setup() {
   starting with the first one
 */
 void loop() {
-  digitalWrite(3, HIGH);
+  digitalWrite(LED1, HIGH);
   delay(500);
-  digitalWrite(5, HIGH);
+  digitalWrite(LED2, HIGH);
   delay(500);
-  digitalWrite(6, HIGH);
+  digitalWrite(LED3, HIGH);
   delay(500);
-  digitalWrite(9, HIGH);
+  digitalWrite(LED4, HIGH);
   delay(500);
-  digitalWrite(10, HIGH);
+  digitalWrite(LED5, HIGH);
   delay(500);
-  digitalWrite(11, HIGH);
+  digitalWrite(LED6, HIGH);
   delay(500);
-  digitalWrite(3, LOW);
+  digitalWrite(LED1, LOW);
   delay(500);
-  digitalWrite(5, LOW);
+  digitalWrite(LED2, LOW);
   delay(500);
-  digitalWrite(6, LOW);
+  digitalWrite(LED3, LOW);
   delay(500);
-  digitalWrite(9, LOW);
+  digitalWrite(LED4, LOW);
   delay(500);
-  digitalWrite(10, LOW);
+  digitalWrite(LED5, LOW);
   delay(500);
-  digitalWrite(11, LOW);
+  digitalWrite(LED6, LOW);
   delay(500);
 }
