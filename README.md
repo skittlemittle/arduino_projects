@@ -1,15 +1,15 @@
-# other_arduino_projects
+# Arduino Projects
 A set of projects made to teach Arduino.
 
-## Blink:
+## Blinking an LED:
 
-## Buttons:
+## Interfacing with buttons:
 
-## LED wave:
+## LED waves:
 
-## Motors:
+## Using motors:
 
-## motion_alarm:
+## A motion alarm:
 
 Senses motion, triggers an alarm; put it in random doorways
 and wait for your victims to be [bamboozled](https://pics.onsizzle.com/you-thought-was-slug-but-was-dogco-bamboozled-again-always-6281922.png)
