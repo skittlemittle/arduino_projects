@@ -1,6 +1,5 @@
 //PIR motion alarm
 
-
 int buzzer = 13;                // choose the pin for the buzzer
 int inputPin = 2;               // choose the input pin (for PIR sensor)
 int pirState = LOW;             // we start, assuming no motion detected

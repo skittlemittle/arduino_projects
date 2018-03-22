@@ -3,9 +3,9 @@ A set of projects made to teach Arduino.
 
 ## Blinking an LED:
 
-## Interfacing with buttons:
-
 ## LED waves:
+
+## Interfacing with buttons:
 
 ## Using motors:
 
