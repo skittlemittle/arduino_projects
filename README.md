@@ -1,5 +1,5 @@
 # Arduino Projects
-A few projects made to teach Arduino.
+A few projects made to teach Arduino, from the basics to making simple robots.
 
 ## Blinking an LED:
 Blinks an LED with one second intervals.
@@ -17,7 +17,7 @@ Pin 13       |     Anode(power)
 GND          |     Cathode(ground)
 
 ## LED waves:
-Turns on and off LED's in a sequence making a wave.
+Turns on and off LED's in a sequence, making a wave.
 
 **Parts:**
 
@@ -39,6 +39,11 @@ GND          |     GND
 ## Interfacing with buttons:
 Turn on and off an LED with a button.
 
+* *button:*  turn the LED on when the button is held down, and off when it is released.
+* *button2:* turn the LED on when the button is pressed and keep it on after it's released.
+* *button2_improved:* same as button2 but with improvements.
+* *button2_debouncing:* same as button2_improved, with debouncing to remove noise.
+
 **Parts:**
 
 * An Arduino.
@@ -49,15 +54,37 @@ Turn on and off an LED with a button.
 
 Arduino     |     Button
 ------------|--------------
-Pin         |     Pin 1
+Pin7        |     Pin 1
 PWR         |     Pin 2
 
 Arduino     |     LED
 ------------|--------------
-Pin         |     Power
+Pin13       |     Power
 GND         |     GND
 
 ## Using motors:
+Controlling DC motors with an Arduino.
+Makes the motor spin one way for a while then the other way.
+
+*pins 0 & 1 on the Arduino are used to upload sketches to it and we are using
+them for the motor controller, so to prevent noise in the upload process
+disconnect the motor controller pins going to pins 0 and 1*
+
+**Parts:**
+
+* An Arduino.
+* A [DC motor](https://duckduckgo.com/?q=DC+motor&t=ffab&atb=v100-7&iar=images&iax=images&ia=images&iai=http%3A%2F%2Fshop.rabtron.co.za%2Fcatalog%2Fimages%2FMM10.jpg).
+* A L293 motor driver board(using the L293D chip).
+
+**Wiring**
+
+Arduino     |     Motor driver
+------------|-------------------
+Pin0        |     Enable motor a
+Pin1        |     Motor a pin 1
+Pin2        |     Motor a pin 2
+Pin3        |     PWR
+Pin4        |     GND
 
 ## A motion alarm:
 Senses motion, triggers an alarm; put it in random doorways
@@ -71,8 +98,8 @@ and wait for your victims to be [bamboozled.](https://pics.onsizzle.com/you-thou
 
 **Wiring**
 
-Arduino     |     Pir sensor
-------------|---------------
+Arduino     |     LED & sensor
+------------|-----------------
 pin 13      |     LED
 pin 2       |     Input from the Pir sensor
 
@@ -83,7 +110,7 @@ A robot car with an ultrasonic sensor that avoids objects in front of it.
 **Parts:**
 
 * HC-SR04 ultrasonic sensor, like this one: https://www.sparkfun.com/products/13959
-* L293 Motor Driver(based on the L293D).
+* L293 motor driver board(based on the L293D chip).
 * Two DC motors.
 * An Arduino.
 
@@ -91,16 +118,18 @@ A robot car with an ultrasonic sensor that avoids objects in front of it.
 
 Arduino     |     Motor driver
 ------------|-----------------
-pin 0       |     Enable pin a
-pin 1       |     Motor pin a1
-pin 2       |     Motor pin a2
+pin 0       |     Enable motor a
+pin 1       |     Motor a pin 1
+pin 2       |     Motor a pin 2
 pin 3       |     PWR
 pin 4       |     GND
-pin 5       |     Enable pin b
-pin 6       |     Motor pin b2
-pin 7       |     Motor pin b1
+pin 5       |     Enable motor b
+pin 6       |     Motor b pin 2
+pin 7       |     Motor b pin 1
 
 Arduino     |     HC-SR04
 ------------|-----------------
 pin 12      |     Trigger (ping)
 pin 11      |     Echo (input)
+GND         |     GND
+PWR         |     PWR

@@ -5,7 +5,7 @@
 
 long randNumber; //load random to a long
 
-//assign the h-bridge pins
+//assign the motor controller pins
 int ea = 0; //enable a
 //motor one
 int a1 = 1;
@@ -14,8 +14,8 @@ int eb = 5; //enable b
 //motor two
 int b2 = 6;
 int b1 = 7;
-int V = 3; //power to the h-bridge
-int G = 4; //ground to the h-bridge
+int V = 3; //power to the motor controller
+int G = 4; //ground to the motor controller
 //the ping pins
 const int pingO = 12;
 const int pingI = 11;
