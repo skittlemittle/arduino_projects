@@ -1,9 +1,4 @@
-//Copyright (c) 2018 Afshaan Londhe
-//this software is licensed under the MIT license
-//which can be found here: https://mit-license.org/
-//this code can be found here: https://github.com/afshaan4/random-arduino-code
-
-// this code pulses an LED
+//pulses an LED, like a sleeping laptop.
 
 const int LED = 9;
 int i = 0; //used to count up and down

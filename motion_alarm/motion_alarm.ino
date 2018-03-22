@@ -1,11 +1,5 @@
-//Copyright (c) 2018 Afshaan Londhe
-//this software is licensed under the MIT license
-//which can be found here: https://mit-license.org/
-//this code can be found here: https://github.com/afshaan4/random-arduino-code
+//PIR motion alarm
 
-/*
- * PIR motion alarm
- */
 
 int buzzer = 13;                // choose the pin for the buzzer
 int inputPin = 2;               // choose the input pin (for PIR sensor)

@@ -1,7 +1,15 @@
 # other_arduino_projects
 A set of projects made to teach Arduino.
 
-## motion_alarm
+## Blink:
+
+## Buttons:
+
+## LED wave:
+
+## Motors:
+
+## motion_alarm:
 
 Senses motion, triggers an alarm; put it in random doorways
 and wait for your victims to be [bamboozled](https://pics.onsizzle.com/you-thought-was-slug-but-was-dogco-bamboozled-again-always-6281922.png)
@@ -20,9 +28,9 @@ pin 13      |     LED
 pin 2       |     Input from the Pir sensor
 
 
-## roamer
+## roamer:
 
-A car robot with an ultrasonic sensor that avoids objects in front of it.
+A robot car with an ultrasonic sensor that avoids objects in front of it.
 
 **Parts:**
 
