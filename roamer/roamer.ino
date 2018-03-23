@@ -143,7 +143,9 @@ void loop() {
   }
 }
 
-//convert the ping time reading to distance
+/*
+function that converts the ping time reading to distance
+*/
 long microsecondsToCentimeters(long microseconds)
 {
   // The speed of sound is 340 m/s or 29 microseconds per centimeter.
