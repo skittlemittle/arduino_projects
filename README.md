@@ -102,15 +102,38 @@ Arduino     |     LED & sensor
 ------------|-----------------
 pin 13      |     LED
 pin 2       |     Input from the Pir sensor
+GND         |     GND
 
+## rangefinder:
+A rangefinder using an [HC-SR04](https://www.sparkfun.com/products/13959) ultrasonic distance sensor.
+
+**Parts:**
+
+* An [HC-SR04](https://www.sparkfun.com/products/13959) ultrasonic sensor.
+* An Arduino.
+* LED's/buzzer.
+
+**Wiring**
+
+Arduino     |     HC-SR04
+------------|-----------------
+pin 12      |     Trigger (ping)
+pin 11      |     Echo (input)
+GND         |     GND
+PWR         |     PWR
+
+Arduino     |     LED/buzzer
+------------|---------------
+Pin13       |     Power
+GND         |     GND
 
 ## roamer:
 A robot car with an ultrasonic sensor that avoids objects in front of it.
 
 **Parts:**
 
-* HC-SR04 ultrasonic sensor, like this one: https://www.sparkfun.com/products/13959
-* L293 motor driver board(based on the L293D chip).
+* An [HC-SR04](https://www.sparkfun.com/products/13959) ultrasonic sensor.
+* A L293 motor driver board(based on the L293D chip).
 * Two DC motors.
 * An Arduino.
 
