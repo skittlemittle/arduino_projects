@@ -16,11 +16,11 @@ int b2 = 6;
 int b1 = 7;
 int V = 3; //power to the motor controller
 int G = 4; //ground to the motor controller
-//the ping pins
+//the ultrasonic sensors pins
 const int pingO = 12;
 const int pingI = 11;
 
-//turns back left
+//turn back left
 void backLeft() {
   //back up for a second
   digitalWrite(a1, HIGH);
@@ -122,8 +122,10 @@ void loop() {
   randNumber = random(0, 2);
 
   //the avoidance stuff
-  if (cm > 1){ //filters values less than 1
-    if (cm < 20){ //is something closer than 20 cm
+
+  //filter out values less than 1 and greater than 20 cm
+  if (cm > 1){
+    if (cm < 20){
     //based on randNumber turn left (0) or right(1)
       if (randNumber == 0){
         backLeft();
@@ -131,7 +133,7 @@ void loop() {
       if (randNumber == 1){
         backRight();
       }
-    } else { //if there isnt anything in front just go straight
+    } else { //if there isn't anything in front just go straight
         digitalWrite(a1, HIGH);
         digitalWrite(a2, LOW);
         digitalWrite(b1, HIGH);
@@ -147,5 +149,5 @@ long microsecondsToCentimeters(long microseconds)
   // The speed of sound is 340 m/s or 29 microseconds per centimeter.
   // The ping travels out and back, so to find the distance of the
   // object we take half of the distance travelled.
-  return microseconds /29 / 2;//return it
+  return microseconds /29 / 2;
 }

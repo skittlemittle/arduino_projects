@@ -86,7 +86,7 @@ Pin2        |     Motor a pin 2
 Pin3        |     PWR
 Pin4        |     GND
 
-## A motion alarm:
+## motion alarm:
 Senses motion, triggers an alarm; put it in random doorways
 and wait for your victims to be [bamboozled.](https://pics.onsizzle.com/you-thought-was-slug-but-was-dogco-bamboozled-again-always-6281922.png)
 
