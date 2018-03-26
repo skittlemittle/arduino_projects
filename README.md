@@ -16,6 +16,10 @@ Arduino      |     LED
 Pin 13       |     Anode(power)
 GND          |     Cathode(ground)
 
+**Diagram:**
+
+![blink](https://raw.githubusercontent.com/afshaan4/other_arduino_projects/master/circuit_diagrams/blink.png)
+
 ## LED waves:
 Turns on and off LED's in a sequence, making a wave.
 
