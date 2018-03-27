@@ -3,6 +3,8 @@ A few projects made to teach Arduino, from the basics to making simple robots.
 
 ## Blinking an LED:
 Blinks an LED with one second intervals.
+Put a 220ohm resistor between the LED's power pin and pin 13 on the Arduino
+(a 1k resistor will work fine too).
 
 **Parts:**
 
@@ -65,6 +67,10 @@ Arduino     |     LED
 ------------|--------------
 Pin13       |     Power
 GND         |     GND
+
+**Diagrams:**
+
+![button](https://raw.githubusercontent.com/afshaan4/other_arduino_projects/master/circuit_diagrams/button.png)
 
 ## Using motors:
 Controlling DC motors with an Arduino.
