@@ -42,6 +42,10 @@ Pin 10       |     LED 5
 Pin 11       |     LED 6
 GND          |     GND
 
+**Diagram:**
+
+![wave](https://raw.githubusercontent.com/afshaan4/other_arduino_projects/master/circuit_diagrams/led_wave.png)
+
 ## Interfacing with buttons:
 Turn on and off an LED with a button.
 
