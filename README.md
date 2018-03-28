@@ -174,3 +174,16 @@ pin 12      |     Trigger (ping)
 pin 11      |     Echo (input)
 GND         |     GND
 PWR         |     PWR
+
+### Licensing stuff
+
+All the code and documentation in this repository is licensed under the MIT license,
+which you should have received with this, to see the exact terms of the license
+read the "LICENSE" file, if you didn't receive the license you can view it
+[here.](https://github.com/afshaan4/other_arduino_projects/blob/master/LICENSE)
+
+All the pictures and circuit diagrams in this repository are licensed under the
+creative commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+the exact terms for which can be found here: https://creativecommons.org/licenses/by-sa/4.0/legalcode
+
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
