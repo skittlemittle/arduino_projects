@@ -28,18 +28,22 @@ Turns on and off LED's in a sequence, making a wave.
 **Parts:**
 
 * An Arduino.
-* 6 LED's.
+* 10 LED's.
 
 **Wiring**
 
 Arduino      |     LED's
 -------------|-------------
-Pin 3        |     LED 1
-Pin 5        |     LED 2
-Pin 6        |     LED 3
-Pin 9        |     LED 4
-Pin 10       |     LED 5
-Pin 11       |     LED 6
+Pin 2        |     LED 1
+Pin 3        |     LED 2
+Pin 4        |     LED 3
+Pin 5        |     LED 4
+Pin 6        |     LED 5
+Pin 7        |     LED 6
+Pin 8        |     LED 7
+Pin 9        |     LED 8
+Pin 10       |     LED 9
+Pin 11       |     LED 10
 GND          |     GND
 
 **Diagram:**
