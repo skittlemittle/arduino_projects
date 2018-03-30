@@ -7,7 +7,8 @@ int val = 0;                    // variable for reading the pin status
 
 void setup() {
   pinMode(buzzer, OUTPUT);      // declare LED as output
-  pinMode(inputPin, INPUT);     // declare sensor as input
+  pinMode(MOTION_PIN, INPUT_PULLUP);     // declare sensor as input,
+                                         // and internally pull it up
 
   Serial.begin(9600);
 }

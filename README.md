@@ -76,7 +76,7 @@ Arduino     |     LED
 Pin13       |     Power
 GND         |     GND
 
-**Diagrams:**
+**Diagram:**
 
 ![button](https://raw.githubusercontent.com/afshaan4/other_arduino_projects/master/circuit_diagrams/button.png)
 
@@ -107,6 +107,7 @@ Pin4        |     GND
 ## motion alarm:
 Senses motion, triggers an alarm; put it in random doorways
 and wait for your victims to be [bamboozled.](https://pics.onsizzle.com/you-thought-was-slug-but-was-dogco-bamboozled-again-always-6281922.png)
+The sensor pin goes LOW when motion is detected, so we pull it up internally.
 
 **Parts:**
 
@@ -122,6 +123,11 @@ pin 13      |     LED
 pin 2       |     Input from the Pir sensor
 GND         |     GND
 
+**Diagram:**
+
+![PIR](https://raw.githubusercontent.com/afshaan4/other_arduino_projects/master/circuit_diagrams/motion_alarm.png)
+*circuit diagram by [sparkfun](https://learn.sparkfun.com/tutorials/pir-motion-sensor-hookup-guide#example-circuit)*
+
 ## rangefinder:
 A rangefinder using an [HC-SR04](https://www.sparkfun.com/products/13959) ultrasonic distance sensor.
 
@@ -129,7 +135,7 @@ A rangefinder using an [HC-SR04](https://www.sparkfun.com/products/13959) ultras
 
 * An [HC-SR04](https://www.sparkfun.com/products/13959) ultrasonic sensor.
 * An Arduino.
-* LED's/buzzer.
+* LED/buzzer.
 
 **Wiring**
 
