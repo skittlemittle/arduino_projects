@@ -104,6 +104,10 @@ Pin2        |     Motor a pin 2
 Pin3        |     PWR
 Pin4        |     GND
 
+**Diagram:**
+
+![motor](https://raw.githubusercontent.com/afshaan4/other_arduino_projects/master/circuit_diagrams/motors.png)
+
 ## motion alarm:
 Senses motion, triggers an alarm; put it in random doorways
 and wait for your victims to be [bamboozled.](https://pics.onsizzle.com/you-thought-was-slug-but-was-dogco-bamboozled-again-always-6281922.png)
@@ -126,6 +130,7 @@ GND         |     GND
 **Diagram:**
 
 ![PIR](https://raw.githubusercontent.com/afshaan4/other_arduino_projects/master/circuit_diagrams/motion_alarm.png)
+
 *circuit diagram by [sparkfun](https://learn.sparkfun.com/tutorials/pir-motion-sensor-hookup-guide#example-circuit)*
 
 ## rangefinder:
