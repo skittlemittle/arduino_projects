@@ -1,6 +1,8 @@
 # Arduino Projects
 A few projects made to teach Arduino, from the basics to making simple robots.
 
+Install the Arduino IDE, you can use [this guide](https://learn.sparkfun.com/tutorials/installing-arduino-ide).
+
 ## Blinking an LED:
 Blinks an LED with one second intervals.
 Put a 220ohm resistor between the LED's power pin and pin 13 on the Arduino
@@ -125,6 +127,7 @@ Arduino     |     LED & sensor
 pin 13      |     LED
 pin 2       |     Input from the Pir sensor
 GND         |     GND
+PWR         |     PWR
 
 **Diagram:**
 
