@@ -1,4 +1,5 @@
-//Turn on an LED when the button is pressed.
+//Turn on an LED when the button is pressed
+//and off when the buuton is released.
 
 //the pin for the LED and button
 const int LED = 13;
