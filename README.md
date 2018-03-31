@@ -133,8 +133,6 @@ PWR         |     PWR
 
 ![PIR](https://raw.githubusercontent.com/afshaan4/other_arduino_projects/master/circuit_diagrams/motion_alarm.png)
 
-*circuit diagram by [sparkfun](https://learn.sparkfun.com/tutorials/pir-motion-sensor-hookup-guide#example-circuit)*
-
 ## rangefinder:
 A rangefinder using an [HC-SR04](https://www.sparkfun.com/products/13959) ultrasonic distance sensor.
 
