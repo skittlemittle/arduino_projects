@@ -126,7 +126,7 @@ GND         |     GND for motors
 
 **Diagram:**
 
-![button](https://raw.githubusercontent.com/afshaan4/other_arduino_projects/master/circuit_diagrams/motors.png)
+![motors](https://raw.githubusercontent.com/afshaan4/other_arduino_projects/master/circuit_diagrams/motors.png)
 
 ## motion alarm:
 Senses motion, triggers an alarm; put it in random doorways
@@ -176,6 +176,10 @@ Arduino     |     LED/buzzer
 ------------|---------------
 Pin13       |     Power
 GND         |     GND
+
+**Diagram:**
+
+![rangefinder](https://raw.githubusercontent.com/afshaan4/other_arduino_projects/master/circuit_diagrams/rangefinder.png)
 
 ## roamer:
 A robot car with an ultrasonic sensor that avoids objects in front of it.
