@@ -126,7 +126,7 @@ GND         |     GND for motors
 
 **Diagram:**
 
-![button](https://raw.githubusercontent.com/afshaan4/other_arduino_projects/master/circuit_diagrams/bmotors.png)
+![button](https://raw.githubusercontent.com/afshaan4/other_arduino_projects/master/circuit_diagrams/motors.png)
 
 ## motion alarm:
 Senses motion, triggers an alarm; put it in random doorways
