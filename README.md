@@ -11,7 +11,8 @@ Put a 220ohm resistor between the LED's power pin and pin 13 on the Arduino
 **Parts:**
 
 * An Arduino.
-* An LED (optional, Arduinos have one already).
+* An LED.
+* A 1k resistor.
 
 **Wiring**
 
@@ -31,6 +32,8 @@ Turns on and off LED's in a sequence, making a wave.
 
 * An Arduino.
 * 10 LED's.
+* 10 1k resistors.
+* A breadboard.
 
 **Wiring**
 
@@ -65,8 +68,14 @@ Turn on and off an LED with a button.
 * An Arduino.
 * A button.
 * An LED.
+* A 1k resistor (for the LED).
+* A 10k resistor (for the button).
+* A breadboard.
 
 **Wiring**
+
+We'll be connecting a 10k pull-down resistor between the button pin we are reading
+and ground, this is to pull the signal from the button 'LOW' when it isn't pressed.
 
 Arduino     |     Button
 ------------|--------------
@@ -95,8 +104,12 @@ disconnect the motor controller pins going to pins 0 and 1*
 * An Arduino.
 * A [DC motor](https://duckduckgo.com/?q=DC+motor&t=ffab&atb=v100-7&iar=images&iax=images&ia=images&iai=http%3A%2F%2Fshop.rabtron.co.za%2Fcatalog%2Fimages%2FMM10.jpg).
 * A L293 motor driver board(using the L293D chip).
+* A 9 volt battery and accompanying clip.
 
 **Wiring**
+
+The motors and motor driver are powered separately, the motors are powered width
+a 9 volt battery and the motor driver is powered by the Arduino.
 
 Arduino     |     Motor driver
 ------------|-------------------
@@ -106,8 +119,14 @@ Pin2        |     Motor a pin 2
 Pin3        |     PWR
 Pin4        |     GND
 
+9v battery  |     Motor driver
+------------|------------------
+9v          |     PWR to motors
+GND         |     GND for motors
+
 **Diagram:**
 
+![motors](https://raw.githubusercontent.com/afshaan4/other_arduino_projects/master/circuit_diagrams/motors.png)
 
 ## motion alarm:
 Senses motion, triggers an alarm; put it in random doorways
@@ -118,7 +137,8 @@ The sensor pin goes LOW when motion is detected, so we pull it up internally.
 
 * An LED.
 * A Pir motion sensor like this one: https://www.adafruit.com/product/189
-* An Arduino
+* An Arduino.
+* A breadboard.
 
 **Wiring**
 
@@ -140,7 +160,8 @@ A rangefinder using an [HC-SR04](https://www.sparkfun.com/products/13959) ultras
 
 * An [HC-SR04](https://www.sparkfun.com/products/13959) ultrasonic sensor.
 * An Arduino.
-* LED/buzzer.
+* A LED/buzzer.
+* A breadboard.
 
 **Wiring**
 
@@ -155,6 +176,10 @@ Arduino     |     LED/buzzer
 ------------|---------------
 Pin13       |     Power
 GND         |     GND
+
+**Diagram:**
+
+![rangefinder](https://raw.githubusercontent.com/afshaan4/other_arduino_projects/master/circuit_diagrams/rangefinder.png)
 
 ## roamer:
 A robot car with an ultrasonic sensor that avoids objects in front of it.

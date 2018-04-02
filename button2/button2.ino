@@ -1,4 +1,4 @@
-//Turn on an LED when the button is pressed and keep it on.
+//Turn on an LED when the button is pressed and keep it on after it is released.
 
 //based on code from Massimo Banzi's 'Getting started with arduino'
 
