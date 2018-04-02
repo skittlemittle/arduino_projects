@@ -211,6 +211,10 @@ pin 11      |     Echo (input)
 GND         |     GND
 PWR         |     PWR
 
+**Diagram:**
+
+![rover](https://raw.githubusercontent.com/afshaan4/other_arduino_projects/master/circuit_diagrams/rover.png)
+
 ### Licensing stuff
 
 All the code and documentation in this repository is licensed under the MIT license,
