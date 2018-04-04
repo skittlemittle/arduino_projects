@@ -103,7 +103,7 @@ disconnect the motor controller pins going to pins 0 and 1*
 
 * An Arduino.
 * A [DC motor](https://duckduckgo.com/?q=DC+motor&t=ffab&atb=v100-7&iar=images&iax=images&ia=images&iai=http%3A%2F%2Fshop.rabtron.co.za%2Fcatalog%2Fimages%2FMM10.jpg).
-* A L293 motor driver board(using the L293D chip).
+* A L293D motor driver board.
 * A 9 volt battery and accompanying clip.
 
 **Wiring**
@@ -187,7 +187,7 @@ A robot car with an ultrasonic sensor that avoids objects in front of it.
 **Parts:**
 
 * An [HC-SR04](https://www.sparkfun.com/products/13959) ultrasonic sensor.
-* A L293 motor driver board(based on the L293D chip).
+* A L293D motor driver board.
 * Two DC motors.
 * An Arduino.
 
