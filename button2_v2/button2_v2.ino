@@ -23,7 +23,7 @@ void loop() {
 
   //check if there was a transition
   //i.e. if val is HIGH and old_val is LOW.
-  if ()(val == HIGH) && (old_val == LOW)) {
+  if ((val == HIGH) && (old_val == LOW)) {
     state = 1 - state;
   }
 
