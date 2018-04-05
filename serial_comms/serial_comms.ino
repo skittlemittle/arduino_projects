@@ -9,6 +9,8 @@ void setup() {
 	// open the serial port to the computer
 	// and set the transmission speed to 9600 baud
 	Serial.begin(9600); 
+
+	//analog pins are input by defalut
 } 
 
 void loop() {
