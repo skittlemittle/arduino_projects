@@ -22,7 +22,7 @@ void loop() {
   val = digitalRead(BUTTON); //read the button's state and store it.
 
   //check if there was a transition
-  if ()(val == HIGH) && (old_val == LOW)) {
+  if ((val == HIGH) && (old_val == LOW)) {
     state = 1 - state;
     delay(10); //debouncing, removes button noise.
   }

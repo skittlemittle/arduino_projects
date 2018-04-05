@@ -34,7 +34,7 @@ void loop() {
   of an object multiplied by 10(we multiply by ten so the waits are longer
   else you wouldn't notice them).
   */
-  if ((cm > 1) and (cm < 20)) { //ignore stuff closer than 1 and further than 20 cm.
+  if ((cm > 1) and (cm < 20)) { //ignore stuff closer than 1 cm and further than 20 cm.
     digitalWrite(LED, HIGH);
     delay(cm * 10);
     digitalWrite(LED, LOW);
