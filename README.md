@@ -128,6 +128,79 @@ GND         |     GND for motors
 
 ![motors](https://raw.githubusercontent.com/afshaan4/other_arduino_projects/master/circuit_diagrams/motors.png)
 
+## Analog read:
+Reads an analog sensor(I use an LDR for this example) connected to analog pin 0 
+and blinks an LED at a rate specified by the reading from the sensor.
+
+**Parts:**
+
+* An LED.
+* An Arduino.
+* A breadboard
+* An LDR
+* A 1k resistor(for the LED).
+* A 10k resistor(for the LDR).
+
+**Wiring**
+Connect an LED to pin 13.
+It doesn't matter which way you connect the LDR, the pins can be swapped.
+Pull the pin on the LDR we are reading to ground with a 10k resistor.
+
+Arduino   |    LDR
+----------|--------------
+Analog0   |    pin1
+PWR       |    pin2
+
+**Diagram:**
+
+![analogread](https://raw.githubusercontent.com/afshaan4/other_arduino_projects/master/circuit_diagrams/analog_read.png)
+
+## Analog Output:
+Pulses an LED in and out like a sleeping laptop.
+
+**Parts:**
+
+* An LED.
+* An Arduino.
+* A breadboard.
+* A 1k resistor.
+
+**Wiring**
+Put a 1k resistor between the cathode and ground
+
+Arduino   |   LED
+----------|-----------
+Pin9      |   Anode
+GND       |   Cathode
+
+**Diagram:**
+
+![pulse](https://raw.githubusercontent.com/afshaan4/other_arduino_projects/master/circuit_diagrams/analog_write.png)
+
+## Serial communication:
+Sends analog signals read from analog pin 0 to a computer over serial.
+After uploading the sketch open the "serial monitor" 
+(it's the button in the top right corner of the IDE)
+
+**Parts:**
+
+* An Arduino.
+* An LDR.
+* A 10k resistor.
+* A breadboard.
+
+**Wiring**
+it's the same as in the analog read example
+
+Arduino   |    LDR
+----------|--------------
+Analog0   |    pin1
+PWR       |    pin2 
+
+**Diagram:**
+
+![serial](https://raw.githubusercontent.com/afshaan4/other_arduino_projects/master/circuit_diagrams/serial_comms.png)
+
 ## motion alarm:
 Senses motion, triggers an alarm; put it in random doorways
 and wait for your victims to be [bamboozled.](https://pics.onsizzle.com/you-thought-was-slug-but-was-dogco-bamboozled-again-always-6281922.png)
