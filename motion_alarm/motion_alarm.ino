@@ -1,4 +1,4 @@
-//PIR motion alarm
+//Beeps a buzzer when motion is detected.
 
 int buzzer = 13;                // the pin for the buzzer
 int inputPin = 2;               // input pin (for PIR sensor)
@@ -17,15 +17,14 @@ void loop(){
   if (val == HIGH) {           // check if the input is HIGH
     digitalWrite(buzzer, HIGH);  // turn buzzer ON
     if (pirState == LOW) {
-      //we have just turned on
+      // we only print if there is a change in state
       Serial.println("Something moves in the shadows!");
-      //we only want to print on the output change, not state
       pirState = HIGH;
     }
   } else {
     digitalWrite(buzzer, LOW); //turn the buzzer OFF
-    if (pirState == HIGH){
-      //we have just turned off
+    if (pirState == HIGH) {
+      //we only want to print if there is a change in state
       Serial.println("The movement has ended.");
       //we only want to print on the output change, not state
       pirState = LOW;
