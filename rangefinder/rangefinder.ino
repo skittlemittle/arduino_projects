@@ -1,14 +1,14 @@
 // rangefinder using the HC-SR04 ultrasonic sensor
 
 // the ultrasonic sensors pins
-const int pingO = 12; // sends a ping
-const int pingI = 11; // reads the ping
+const int trigger = 12; // sends a ping
+const int echo = 11; // reads the ping
 
 const int LED = 13; // the LED or buzzer
 
 void setup() {
-  pinMode(pingO, OUTPUT); // set the trigger as output
-  pinMode(pingI, INPUT); // set the reader as input
+  pinMode(trigger, OUTPUT); // set the trigger as output
+  pinMode(echo, INPUT); // set the reader as input
   pinMode(LED, OUTPUT);
 }
 
@@ -17,14 +17,14 @@ void loop() {
   long duration, cm; // used to calculate distance
 
   // send a ping
-  digitalWrite(pingO, LOW); // pull it low for a clean ping
+  digitalWrite(trigger, LOW); // pull it low for a clean ping
   delayMicroseconds(2);
-  digitalWrite(pingO, HIGH); // send the ping
+  digitalWrite(trigger, HIGH); // send the ping
   delayMicroseconds(5);
-  digitalWrite(pingO, LOW); // pull it low again
+  digitalWrite(trigger, LOW); // pull it low again
 
   // store the time it takes for the ping to return
-  duration = pulseIn(pingI, HIGH);
+  duration = pulseIn(echo, HIGH);
   // convert the time it takes into centimeters
   cm = microsecondsToCentimeters(duration);
 
