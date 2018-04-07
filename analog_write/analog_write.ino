@@ -1,7 +1,7 @@
 // Fades an LED in and out, like a sleeping laptop
 
 const int LED = 9;
-int i = 0; //used to count up and down
+int i = 0; // used to count up and down
 
 void setup() {
   pinMode(LED, OUTPUT);
