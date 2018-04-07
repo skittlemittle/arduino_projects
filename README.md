@@ -142,6 +142,7 @@ and blinks an LED at a rate specified by the reading from the sensor.
 * A 10k resistor(for the LDR).
 
 **Wiring**
+
 Connect an LED to pin 13.
 It doesn't matter which way you connect the LDR, the pins can be swapped.
 Pull the pin on the LDR we are reading to ground with a 10k resistor.
@@ -190,6 +191,7 @@ After uploading the sketch open the "serial monitor"
 * A breadboard.
 
 **Wiring**
+
 it's the same as in the analog read example
 
 Arduino   |    LDR

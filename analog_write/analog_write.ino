@@ -8,14 +8,14 @@ void setup() {
 }
 
 void loop() {
-  // loop from 1 to 255 and increase the 
+  // loop from 0 to 255 and increase the 
   // brightness of the LED each time we go through the loop
   for (i = 0; i < 255; i++) { 
     analogWrite(LED, i);
     delay(10);
   }
 
-  // loop from 1 to 255 and decrease the 
+  // loop from 255 to 0 and decrease the 
   // brightness of the LED each time we go through the loop
   for (i = 255; i > 0; i--) {
     analogWrite(LED, i);

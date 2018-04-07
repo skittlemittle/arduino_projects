@@ -8,7 +8,7 @@ int val = 0;
 void setup() {
 	pinMode(LED, OUTPUT);
 
-	//analog pins are input by defalut
+	//analog pins are input by default
 }
 
 void loop() {
