@@ -3,6 +3,9 @@ A few projects made to teach Arduino, from the basics to making simple robots.
 
 Install the Arduino IDE, you can use [this guide](https://learn.sparkfun.com/tutorials/installing-arduino-ide).
 
+Then download, or clone, this repository and copy all the stuff from the downloaded folder into 
+the Arduino IDEs sketchbook folder, the sketchbook folder is most probably at `/home/sketchbook`
+
 ## Blinking an LED:
 Blinks an LED with one second intervals.
 Put a 220ohm resistor between the LED's power pin and pin 13 on the Arduino
