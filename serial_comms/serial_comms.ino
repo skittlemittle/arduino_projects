@@ -10,13 +10,12 @@ void setup() {
 	// and set the transmission speed to 9600 baud
 	Serial.begin(9600); 
 
-	//analog pins are input by defalut
+	// analog pins are input by default
 } 
 
 void loop() {
 	val = analogRead(sensor); // read the sensor
 	Serial.println(val); // send the value read from the sensor to the computer
 	
-	delay(100); // wait between each send
-	            //makes reading through the stuff easier
+	delay(100); // wait between each send makes reading through the stuff easier
 }
