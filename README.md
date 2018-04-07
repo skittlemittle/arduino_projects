@@ -213,16 +213,16 @@ The sensor pin goes LOW when motion is detected, so we pull it up internally.
 
 **Parts:**
 
-* An LED.
+* An Buzzer.
 * A Pir motion sensor like this one: https://www.adafruit.com/product/189
 * An Arduino.
 * A breadboard.
 
 **Wiring**
 
-Arduino     |     LED & sensor
+Arduino     |     buzzer & sensor
 ------------|-----------------
-pin 13      |     LED
+pin 13      |     buzzer
 pin 2       |     Input from the Pir sensor
 GND         |     GND
 PWR         |     PWR

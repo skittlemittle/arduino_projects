@@ -6,7 +6,7 @@ int pirState = LOW;             // we start, assuming no motion detected
 int val = 0;                    // variable for reading the pin status
 
 void setup() {
-  pinMode(buzzer, OUTPUT);      // declare LED as output
+  pinMode(buzzer, OUTPUT);      // declare buzzer as output
   pinMode(MOTION_PIN, INPUT_PULLUP);     // declare sensor as input, and internally pull it up                  
 
   Serial.begin(9600);
@@ -18,7 +18,7 @@ void loop(){
     digitalWrite(buzzer, HIGH);  // turn buzzer ON
     if (pirState == LOW) {
       //we have just turned on
-      Serial.println("Motion detected!");
+      Serial.println("Something moves in the shadows!");
       //we only want to print on the output change, not state
       pirState = HIGH;
     }
@@ -26,7 +26,7 @@ void loop(){
     digitalWrite(buzzer, LOW); //turn the buzzer OFF
     if (pirState == HIGH){
       //we have just turned off
-      Serial.println("Motion ended!");
+      Serial.println("The movement has ended.");
       //we only want to print on the output change, not state
       pirState = LOW;
     }
