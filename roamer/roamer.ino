@@ -1,9 +1,7 @@
-// Copyright (c) 2018 Afshaan Londhe
-// this software is licensed under the MIT license
-// which can be found here: https://mit-license.org/
-// this code can be found here: https://github.com/afshaan4/random-arduino-code
+// an obstacle avoiding robot
+// wiring diagrams and assembly guides can be found here: https://aaalearn.mystagingwebsite.com/2018/03/arduino-camp/
 
-long randNumber; // load random to a long
+long randNumber; // used to store the random number
 
 // assign the motor controller pins
 int ea = 0; //enable a
@@ -17,10 +15,12 @@ int b1 = 7;
 int V = 3; // power to the motor controller
 int G = 4; // ground to the motor controller
 // the ultrasonic sensors pins
-const int pingO = 12;
-const int pingI = 11;
+const int trigger = 12;
+const int echo = 11;
 
-// turn back left
+/*
+function used to make the robot back up and then turn left
+*/
 void backLeft() {
   // back up for a second
   digitalWrite(a1, HIGH);
@@ -48,7 +48,9 @@ void backLeft() {
   delay(10);
 }
 
-// turn right
+/*
+function used to make the robot back up and then turn right
+*/
 void backRight() {
   // back up for a second
   digitalWrite(a1, HIGH);
@@ -99,8 +101,8 @@ void setup() {
   digitalWrite(eb, HIGH);
   digitalWrite(V, HIGH);
   digitalWrite(G, LOW);
-  pinMode(pingO, OUTPUT);
-  pinMode(pingI, INPUT);
+  pinMode(trigger, OUTPUT);
+  pinMode(echo, INPUT);
 }
 
 // the main loop
@@ -108,14 +110,14 @@ void loop() {
   // the ping stuff
   long duration, cm;
   // send a ping
-  digitalWrite(pingO, LOW);
+  digitalWrite(trigger, LOW);
   delayMicroseconds(2);
-  digitalWrite(pingO, HIGH);
+  digitalWrite(trigger, HIGH);
   delayMicroseconds(5);
-  digitalWrite(pingO, LOW);
+  digitalWrite(trigger, LOW);
 
   // listen for a return
-  duration = pulseIn(pingI, HIGH);
+  duration = pulseIn(echo, HIGH);
   // convert the time of the ping into cm
   cm = microsecondsToCentimeters(duration);
   // put random in a variable
