@@ -266,8 +266,14 @@ A robot car with an ultrasonic sensor that avoids objects in front of it.
 
 * An [HC-SR04](https://www.sparkfun.com/products/13959) ultrasonic sensor.
 * A L293D motor driver board.
-* Two DC motors.
 * An Arduino.
+* A robot chassis.
+* Two DC motors.
+* A castor(it's a kinda wheel that can move in any direction).
+* Two wheels that fit the motor shafts.
+* Two 9v batteries and accompanying battery clips.
+* Various screws and bolts to mount all this stuff to the robot chassis.
+* A screwdriver.
 
 **Wiring**
 
