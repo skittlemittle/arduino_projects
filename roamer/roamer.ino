@@ -89,13 +89,6 @@ void setup() {
   pinMode(eb, OUTPUT);
   pinMode(b2, OUTPUT);
   pinMode(b1, OUTPUT);
-  /*
-    analog input 0 is used as a random noise source 
-    to seed the random number genrator.
-    the analog noise that analog 0 picks up
-    is the source of randomness
-  */
-  randomSeed(analogRead(5));
   // turn the motor driver on and enable both motors
   digitalWrite(ea, HIGH);
   digitalWrite(eb, HIGH);
@@ -105,7 +98,6 @@ void setup() {
   pinMode(echo, INPUT);
 }
 
-// the main loop
 void loop() {
   // the ping stuff
   long duration, cm;
@@ -124,7 +116,6 @@ void loop() {
   randNumber = random(0, 2);
 
   // the avoidance stuff
-
   // filter out values less than 1 and greater than 20 cm
   if (cm > 1){
     if (cm < 20){
