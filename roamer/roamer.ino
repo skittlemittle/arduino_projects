@@ -127,11 +127,11 @@ void loop() {
         backRight();
       }
     } else { // if there isn't anything in front just go straight
-        digitalWrite(a1, HIGH);
-        digitalWrite(a2, LOW);
-        digitalWrite(b1, HIGH);
-        digitalWrite(b2, LOW);
-        delay(150);
+      digitalWrite(a1, HIGH);
+      digitalWrite(a2, LOW);
+      digitalWrite(b1, HIGH);
+      digitalWrite(b2, LOW);
+      delay(150);
     }
   }
 }
