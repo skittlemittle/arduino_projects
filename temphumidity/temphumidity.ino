@@ -50,11 +50,18 @@ void loop() {
     return;
   }
 
-  //print humidity and temperature readings to the screen.
+  /*
+  print humidity and temperature readings to the screen.
+  */
+
+  // humidity goes on one line.
   Serial.print("Humidity: ");
   Serial.print(h);
   Serial.println("%");
+  //temperature goes on the next line.
   Serial.print("Temp: ");
   Serial.print(t);
   Serial.println("*C   ");
+  //separate each set of readings with a empty line.
+  Serial.println("");
 }
