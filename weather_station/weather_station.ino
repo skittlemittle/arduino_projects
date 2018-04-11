@@ -12,6 +12,8 @@
 
 #include "DHT.h"
 #include <LiquidCrystal.h>
+#include <SFE_BMP180.h>
+#include <Wire.h>
 
 //set the sensor and LCD pins
 #define DHTPIN 7
