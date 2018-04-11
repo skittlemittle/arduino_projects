@@ -11,6 +11,7 @@ void setup() {
   pinMode(trigger, OUTPUT); // set the trigger as output
   pinMode(echo, INPUT); // set the reader as input
   pinMode(LED, OUTPUT);
+  Serial.begin(9600);
 }
 
 void loop() {
@@ -40,6 +41,8 @@ void loop() {
     delay(cm * 10);
     digitalWrite(LED, LOW);
     delay(cm * 10);
+    Serial.print(cm);
+    Serial.println("centimeters");
   }
 }
 

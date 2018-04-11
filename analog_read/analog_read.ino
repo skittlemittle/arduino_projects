@@ -1,5 +1,4 @@
-// blink an LED at a speed based on 
-// analog input from analog pin 0
+// blink an LED at a speed based on analog input from analog pin 0
 
 const int LED = 13;
 
