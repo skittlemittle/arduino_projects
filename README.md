@@ -299,6 +299,50 @@ PWR         |     PWR
 
 ![rover](https://raw.githubusercontent.com/afshaan4/other_arduino_projects/master/circuit_diagrams/rover.png)
 
+## Barometer:
+Reads from a BMP180 barometer and sends pressure, calculated altitude and, temperature 
+readings to a computer.
+Set you elevation from sea level(in meters) in the `ALTITUDE` variable.
+
+**WARNING:** The sensors can only take 3 volt power, don't power it with 5 volts!.
+
+Although, the SDA and SCL pins can operate at 5 volt logic so those can be directly connected 
+to an Arduinos SDA and SCL pins.
+
+**Parts:**
+
+* An Arduino.
+* A BMP180 barometer.
+
+**Wiring**
+
+Arduino    |     BMP180
+-----------|------------
+3 volts    |     VIN
+GND        |     GND
+SDA        |     SDA
+SCL        |     SCL
+
+## Seismometer:
+A "seismometer" demo using a piezo element, this is not scientific or accurate.
+Don't use this to measure earthquakes as it has no unit of measurement, 
+just: many shake! such measure! Do use this to measure relative vibration though.
+
+**Parts:**
+
+* An Arduino.
+* A piezo element.
+* A 100k resistor.
+
+**Wiring**
+
+Connect a 100k resistor from the pin you are reading to ground.
+
+Arduino    |    piezo
+-----------|------------
+Analog 0   |    Pin 1
+GND        |    Pin 2
+
 ### Licensing stuff
 
 All the code and documentation in this repository is licensed under the MIT license,
