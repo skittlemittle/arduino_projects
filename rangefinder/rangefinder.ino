@@ -1,4 +1,5 @@
 // rangefinder using the HC-SR04 ultrasonic sensor
+// this codes repo: https://github.com/afshaan4/other_arduino_projects
 
 // the ultrasonic sensors pins
 const int trigger = 12; // sends a ping

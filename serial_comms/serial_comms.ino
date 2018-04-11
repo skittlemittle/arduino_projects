@@ -1,5 +1,8 @@
-// sends values read from analog input 0
-// to a computer with serial print.
+/*
+ sends values read from analog input 0
+ to a computer with serial print.
+ this codes repo: https://github.com/afshaan4/other_arduino_projects
+*/
 
 const int sensor = 0; // the pin for the analog sensor
 

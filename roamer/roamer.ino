@@ -1,5 +1,8 @@
-// an obstacle avoiding robot
-// wiring diagrams and assembly guides can be found here: https://aaalearn.mystagingwebsite.com/2018/03/arduino-camp/
+/*
+ an obstacle avoiding robot
+ wiring diagrams and assembly guides can be found here: https://aaalearn.mystagingwebsite.com/2018/03/arduino-camp/
+ this codes repo: https://github.com/afshaan4/other_arduino_projects
+*/
 
 long randNumber; // used to store the random number
 

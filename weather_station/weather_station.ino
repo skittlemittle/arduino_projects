@@ -1,6 +1,14 @@
-// weather station
-// this codes repo: https://github.com/afshaan4/other_arduino_projects
+/* 
+  An Arduino weather station, using:
+  * A BMP180 barometer.
+  * A DHT11 temperature and humidity sensor.
+  * An LDR.
+  * A "rain sensor".
+  * A Soil moisture sensor(because we can).
 
+  For wiring diagrams and stuff visit: 
+  this codes repo: https://github.com/afshaan4/other_arduino_projects
+*/
 
 #include "DHT.h"
 #include <LiquidCrystal.h>

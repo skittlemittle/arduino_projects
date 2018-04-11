@@ -1,5 +1,5 @@
 // reads temperature and humidity from a DHTXX and sends it to a computer over serial.
-// this codes repo: https://github.com/afshaan4/random-arduino-code
+// this codes repo: https://github.com/afshaan4/other_arduino_projects
 
 #include "DHT.h"
 

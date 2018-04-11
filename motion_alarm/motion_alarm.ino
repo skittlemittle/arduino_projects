@@ -1,4 +1,8 @@
-// Beeps a buzzer when motion is detected.
+/*
+ Beeps a buzzer when motion is detected.
+ perfect for jump scares
+ this codes repo: https://github.com/afshaan4/other_arduino_projects
+*/
 
 int buzzer = 13;                // the pin for the buzzer
 int inputPin = 2;               // input pin (for PIR sensor)
@@ -7,7 +11,7 @@ int val = 0;                    // variable for reading the pin status
 
 void setup() {
   pinMode(buzzer, OUTPUT);      // declare buzzer as output
-  pinMode(MOTION_PIN, INPUT_PULLUP);     // declare sensor as input, and internally pull it up
+  pinMode(inputPin, INPUT_PULLUP);     // declare sensor as input, and internally pull it up
 
   Serial.begin(9600);
 }
