@@ -53,17 +53,15 @@ SFE_BMP180 pressure;
 
 #define ALTITUDE 920.0 // Altitude of Bangalore, India in meters
 
-void setup()
-{
+void setup() {
   Serial.begin(9600);
   Serial.println("REBOOT");
 
   // Initialize the sensor (it is important to get calibration values stored on the device).
 
-  if (pressure.begin())
+  if (pressure.begin()) {
     Serial.println("BMP180 init success");
-  else
-  {
+  } else {
     // Oops, something went wrong, this is usually a connection problem,
     // see the comments at the top of this sketch for the proper connections.
 
@@ -72,8 +70,7 @@ void setup()
   }
 }
 
-void loop()
-{
+void loop() {
   char status;
   double T,P,p0,a;
 

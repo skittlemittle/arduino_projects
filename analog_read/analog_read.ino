@@ -17,4 +17,5 @@ void loop() {
 	delay(val); // wait, using the reading from val as the wait time
 	digitalWrite(LED, LOW);
 	delay(val); // wait, using the reading from val as the wait time
+	Serial.println(val);
 }
