@@ -4,7 +4,6 @@
   * A DHT11 temperature and humidity sensor.
   * An LDR.
   * A "rain sensor".
-  * A Soil moisture sensor(because we can).
 
   For wiring diagrams and stuff visit: 
   this codes repo: https://github.com/afshaan4/other_arduino_projects
@@ -14,6 +13,8 @@
 #include <LiquidCrystal.h>
 #include <SFE_BMP180.h>
 #include <Wire.h>
+
+const int rain = 8;
 
 //set the sensor and LCD pins
 #define DHTPIN 7
@@ -38,8 +39,8 @@ DHT dht(DHTPIN, DHTTYPE);
 
 void setup() {
   lcd.begin(16, 2);
-  lcd.write("Weather Station");
   dht.begin();
+  Serial.begin(9600);
 
   // Initialize the BMP180 sensor (it is important to get calibration values stored on the device).
   if (pressure.begin()) {
@@ -50,13 +51,9 @@ void setup() {
     Serial.println("BMP180 init fail\n\n");
     while(1); // Pause forever.
   }
-
 }
 
 void loop() {
-  //wait a few seconds between measurements.
-  delay(2000);
-  lcd.setCursor(0, 1); 
 
   // variables for the BMP180
   char status;
@@ -76,12 +73,98 @@ void loop() {
     return;
   }
 
+  // Loop here getting pressure readings every 10 seconds.
+
+  // If you want sea-level-compensated pressure, as used in weather reports,
+  // you will need to know the altitude at which your measurements are taken.
+  // We're using a constant called ALTITUDE in this sketch:
+  
+  lcd.print("given alt: ");
+  lcd.print(ALTITUDE,0);
+  lcd.print("m");
+  lcd.setCursor(0, 1);
+  
+  // If you want to measure altitude, and not pressure, you will instead need
+  // to provide a known baseline pressure. This is shown at the end of the sketch.
+
+  // You must first get a temperature measurement to perform a pressure reading.
+  
+  // Start a temperature measurement:
+  // If request is successful, the number of ms to wait is returned.
+  // If request is unsuccessful, 0 is returned.
+
+  status = pressure.startTemperature();
+  if (status != 0)
+  {
+    // Wait for the measurement to complete:
+    delay(status);
+
+    // Retrieve the completed temperature measurement:
+    // Note that the measurement is stored in the variable T.
+    // Function returns 1 if successful, 0 if failure.
+
+    status = pressure.getTemperature(T);
+    if (status != 0)
+    {
+      // Start a pressure measurement:
+      // The parameter is the oversampling setting, from 0 to 3 (highest res, longest wait).
+      // If request is successful, the number of ms to wait is returned.
+      // If request is unsuccessful, 0 is returned.
+
+      status = pressure.startPressure(3);
+      if (status != 0)
+      {
+        // Wait for the measurement to complete:
+        delay(status);
+
+        // Retrieve the completed pressure measurement:
+        // Note that the measurement is stored in the variable P.
+        // Note also that the function requires the previous temperature measurement (T).
+        // (If temperature is stable, you can do one temperature measurement for a number of pressure measurements.)
+        // Function returns 1 if successful, 0 if failure.
+
+        status = pressure.getPressure(P,T);
+        if (status != 0)
+        {
+          // Print out the measurement:
+          lcd.print("ab Pr: ");
+          lcd.print(P,2);
+          lcd.print("mb");
+          delay(3000);
+          lcd.clear();
+
+          // The pressure sensor returns abolute pressure, which varies with altitude.
+          // To remove the effects of altitude, use the sealevel function and your current altitude.
+          // This number is commonly used in weather reports.
+          // Parameters: P = absolute pressure in mb, ALTITUDE = current altitude in m.
+          // Result: p0 = sea-level compensated pressure in mb
+
+          p0 = pressure.sealevel(P,ALTITUDE); // we're at 920 meters.
+          lcd.print("rel Pr ");
+          lcd.print(p0,2);
+          lcd.print("mb");
+          delay(3000);
+          lcd.clear();
+
+        }
+        else Serial.println("error retrieving pressure measurement\n");
+      }
+      else Serial.println("error starting pressure measurement\n");
+    }
+    else Serial.println("error retrieving temperature measurement\n");
+  }
+  else Serial.println("error starting temperature measurement\n");
+
+
   //print humidity and temperature redings to the screen.
   lcd.print("Humidity: ");
   lcd.print(h);
-  lcd.print("%\t ");
+  lcd.print("%");
   lcd.setCursor(0, 1);
   lcd.print("Temp: ");
   lcd.print(t);
   lcd.print("*C   ");
+  lcd.setCursor(1, 1);
+  delay(3000);
+  lcd.clear();
 }
