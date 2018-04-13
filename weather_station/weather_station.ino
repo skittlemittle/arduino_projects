@@ -4,6 +4,10 @@
   * A DHT11 temperature and humidity sensor.
   * An LDR.
   * A "rain sensor".
+  * A 16x2 LCD.
+
+  The sensor readings are sent to the LCD
+  and debugging stuff is sent to a computer over serial
 
   For wiring diagrams and stuff visit: 
   this codes repo: https://github.com/afshaan4/other_arduino_projects
@@ -15,6 +19,10 @@
 #include <Wire.h>
 
 const int rain = 8;
+const int light = A0;
+
+int rval; //used to read the rain sensor
+int lval; //used to read the LDR
 
 //set the sensor and LCD pins
 #define DHTPIN 7
@@ -59,6 +67,10 @@ void loop() {
   char status;
   double T,P,p0,a; // temperature, pressure, sea-level compensated pressure, computed altitude.
 
+  //read the rain and light sensors
+  lval = analogRead(light);
+  rval = digitalRead(rain);
+
   //reading temperature or humidity takes about 250 milliseconds!
   //sensor readings may also be up to 2 seconds 'old' (its a very slow sensor)
   float h = dht.readHumidity();
@@ -73,6 +85,7 @@ void loop() {
     return;
   }
 
+
   // Loop here getting pressure readings every 10 seconds.
 
   // If you want sea-level-compensated pressure, as used in weather reports,
@@ -84,9 +97,6 @@ void loop() {
   lcd.print("m");
   lcd.setCursor(0, 1);
   
-  // If you want to measure altitude, and not pressure, you will instead need
-  // to provide a known baseline pressure. This is shown at the end of the sketch.
-
   // You must first get a temperature measurement to perform a pressure reading.
   
   // Start a temperature measurement:
@@ -147,6 +157,7 @@ void loop() {
           lcd.clear();
 
         }
+        // these are for debugging so we send them to the computer.
         else Serial.println("error retrieving pressure measurement\n");
       }
       else Serial.println("error starting pressure measurement\n");
@@ -156,7 +167,7 @@ void loop() {
   else Serial.println("error starting temperature measurement\n");
 
 
-  //print humidity and temperature redings to the screen.
+  //print humidity and temperature readings to the screen.
   lcd.print("Humidity: ");
   lcd.print(h);
   lcd.print("%");
@@ -167,4 +178,18 @@ void loop() {
   lcd.setCursor(1, 1);
   delay(3000);
   lcd.clear();
+
+  lcd.print("Light: ");
+  lcd.print(lval);
+  lcd.setCursor(1, 1);
+
+  if(rval == HIGH) {
+    lcd.print("No rain");
+    delay(3000);
+    lcd.clear();
+  } else {
+    lcd.print("Raining");
+    delay(3000);
+    lcd.clear();
+  }
 }
