@@ -1,5 +1,8 @@
 # Arduino Projects
-A few projects made to teach Arduino, from the basics to making simple robots.
+The code for Arduino projects, made to be used in a Arduino beginner course.
+These projects range from blinking an LED to making robots and a weather station.
+
+Wiring guides and full explanations are [here](https://aaalearn.mystagingwebsite.com/2018/03/arduino-camp/) and [here](https://aaalearn.mystagingwebsite.com/2018/04/arduino-summer-camp-middle-school/)
 
 ### Using it:
 * Install the Arduino IDE, you can use [this guide](https://learn.sparkfun.com/tutorials/installing-arduino-ide).
@@ -18,9 +21,3 @@ All the code and documentation in this repository is licensed under the MIT lice
 which you should have received with this, to see the exact terms of the license
 read the "LICENSE" file, if you didn't receive the license you can view it
 [here.](https://github.com/afshaan4/other_arduino_projects/blob/master/LICENSE)
-
-All the pictures and circuit diagrams in this repository are licensed under the
-creative commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
-the exact terms for which can be found here: https://creativecommons.org/licenses/by-sa/4.0/legalcode
-
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
