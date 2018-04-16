@@ -1,11 +1,11 @@
 // makes a DC motor spin one direction for a second then the other
 
 // assign the motor controller pins
-int ea = 0; // enable motor a
-int a1 = 1; // motor a pin 1
-int a2 = 2; // motor a pin 2
-int V = 3; // power to the motor controller
-int G = 4; // ground to the motor controller
+int a1 = 2; // motor a pin 1
+int a2 = 3; // motor a pin 2
+int ea = 4; // enable motor a
+int V = 5; // power to the motor controller
+int G = 6; // ground to the motor controller
 
 void setup() {
   // setup the motor controller pins

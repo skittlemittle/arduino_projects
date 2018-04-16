@@ -29,7 +29,7 @@
 DHT dht(DHTPIN, DHTTYPE);
 
 void setup() {
-  dht.begin(); // initialize the sensor
+  dht.begin(); // start the library
   Serial.begin(9600);
 }
 
