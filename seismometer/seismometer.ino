@@ -8,8 +8,7 @@
  Open the serial plotter in the Arduino IDE for nice graphs.
 */
 
-int val = 0;
-int reading = 0; // used to map the readings from sensor to a range of 0 to 100.
+int val, reading; // used to store the readings, and map them
 
 void setup() {
 	Serial.begin(9600);
@@ -28,5 +27,4 @@ void loop() {
 	reading = map(val, 0, 500, 0, 100);
 
 	Serial.println(reading); // super simple: read the sensor and send the reading to a computer.
-	delay(10);
 }
