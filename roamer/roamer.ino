@@ -116,22 +116,20 @@ void loop() {
 
   // the avoidance stuff
   // filter out values less than 1 and greater than 20 cm
-  if (cm > 1){
-    if (cm < 20){
+  if ((cm > 1) && (cm < 40)){
     // based on randNumber turn left (0) or right(1)
-      if (randNumber == 0){
-        backLeft();
-      }
-      if (randNumber == 1){
-        backRight();
-      }
-    } else { // if there isn't anything in front just go straight
-      digitalWrite(a1, HIGH);
-      digitalWrite(a2, LOW);
-      digitalWrite(b1, HIGH);
-      digitalWrite(b2, LOW);
-      delay(150);
+    if (randNumber == 0){
+      backLeft();
     }
+    if (randNumber == 1){
+        backRight();
+    }
+  } else { // if there isn't anything in front just go straight
+    digitalWrite(a1, HIGH);
+    digitalWrite(a2, LOW);
+    digitalWrite(b1, HIGH);
+    digitalWrite(b2, LOW);
+    delay(150);
   }
 }
 
