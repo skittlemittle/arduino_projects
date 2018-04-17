@@ -1,5 +1,13 @@
 /*
- an obstacle avoiding robot
+ An obstacle avoiding robot, using an HC-SR04 ultrasonic sensor
+
+ Note: The L293D has "motor-enable" pins, these are used to turn on and off the motors
+ you an also control the speed of the motors by sending a PWM to these pins.
+ For this example give the enable pins 5 volts.
+
+ If you board doesn't have these pin or they are shorted to power
+ and you don't want to do speed control stuff then you don't need to give them power.
+
  wiring diagrams and assembly guides can be found here: https://aaalearn.mystagingwebsite.com/2018/03/arduino-camp/
  this codes repo: https://github.com/afshaan4/other_arduino_projects
 */
@@ -7,16 +15,12 @@
 long randNumber; // used to store the random number
 
 // assign the motor controller pins
-int ea = 0; //enable a
 // motor one
-int a1 = 1;
-int a2 = 2;
-int eb = 5; // enable b
+int a1 = 2;
+int a2 = 3;
 // motor two
-int b2 = 6;
-int b1 = 7;
-int V = 3; // power to the motor controller
-int G = 4; // ground to the motor controller
+int b1 = 4;
+int b2 = 5;
 // the ultrasonic sensors pins
 const int trigger = 12;
 const int echo = 11;
@@ -84,19 +88,11 @@ void backRight() {
 // the setup stuff
 void setup() {
   // setup the motor controller pins
-  pinMode(ea, OUTPUT);
   pinMode(a1, OUTPUT);
   pinMode(a2, OUTPUT);
-  pinMode(V, OUTPUT);
-  pinMode(G, INPUT);
-  pinMode(eb, OUTPUT);
   pinMode(b2, OUTPUT);
   pinMode(b1, OUTPUT);
-  // turn the motor driver on and enable both motors
-  digitalWrite(ea, HIGH);
-  digitalWrite(eb, HIGH);
-  digitalWrite(V, HIGH);
-  digitalWrite(G, LOW);
+  // set the ultrasonic sensors pins
   pinMode(trigger, OUTPUT);
   pinMode(echo, INPUT);
 }
