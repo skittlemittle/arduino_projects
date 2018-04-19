@@ -7,9 +7,21 @@ Wiring guides and full explanations are [here](https://aaalearn.mystagingwebsite
 ### Using it:
 * Install the Arduino IDE, you can use [this guide](https://learn.sparkfun.com/tutorials/installing-arduino-ide).
 
+ **If you have Git**
+ 
 * Clone this repository `git clone https://github.com/afshaan4/other_arduino_projects.git`
 
 * Install these libraries by cloning them into the `Arduino/libraries` folder:
+
+ * [LiquidCrystal](https://github.com/arduino-libraries/LiquidCrystal)
+ * [DHT sensor library](https://github.com/adafruit/DHT-sensor-library)
+ * [BMP180 library](https://github.com/sparkfun/BMP180_Breakout_Arduino_Library)
+
+**If you dont have Git**
+
+* Download this repository as a zip from [here](https://github.com/afshaan4/other_arduino_projects)
+
+* Download the librariaries as zips from here:
 
  * [LiquidCrystal](https://github.com/arduino-libraries/LiquidCrystal)
  * [DHT sensor library](https://github.com/adafruit/DHT-sensor-library)
