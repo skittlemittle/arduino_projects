@@ -13,7 +13,7 @@ int val, reading; // used to store the readings, and map them
 void setup() {
 	Serial.begin(9600);
 
-	//analog pins are input by default.
+	// analog pins are input by default.
 }
 
 void loop() {

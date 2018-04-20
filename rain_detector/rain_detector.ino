@@ -1,8 +1,8 @@
-//reads a rain detector and turns on an LED if it detects rain
+// reads a rain detector and turns on an LED if it detects rain
 
 int LED = 13;
 int rainSensor = 8;
-int val; //used to read sensor
+int val; // used to read sensor
 
 void setup() {
 	pinMode(LED, OUTPUT);
@@ -12,8 +12,8 @@ void setup() {
 void loop()  {
 	val =  digitalRead(rainSensor);
 
-    //the sensor returns HIGH if there is no rain
-    //and LOW when there is rain
+    // the sensor returns HIGH if there is no rain
+    // and LOW when there is rain
 	if(val == HIGH) {
 		digitalWrite(LED, LOW);
 	} else {

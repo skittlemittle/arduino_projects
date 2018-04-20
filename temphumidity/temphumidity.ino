@@ -3,10 +3,10 @@
 
 #include "DHT.h"
 
-//set the sensor pin
+// set the sensor pin
 #define DHTPIN 7
 
-//Uncomment whatever type you're using.
+// Uncomment whatever type you're using.
 #define DHTTYPE DHT11   // DHT 11
 //#define DHTTYPE DHT22   // DHT 22  (AM2302), AM2321
 //#define DHTTYPE DHT21   // DHT 21 (AM2301)
@@ -34,34 +34,34 @@ void setup() {
 }
 
 void loop() {
-  //wait a few seconds between measurements.
+  // wait a few seconds between measurements.
   delay(2000);
-  //reading temperature or humidity takes about 250 milliseconds.
-  //sensor readings may also be up to 2 seconds 'old' (its a very slow sensor)
+  // reading temperature or humidity takes about 250 milliseconds.
+  // sensor readings may also be up to 2 seconds 'old' (its a very slow sensor)
   float h = dht.readHumidity();
-  //read temperature as Celsius (the default)
+  // read temperature as Celsius (the default)
   float t = dht.readTemperature();
-  //If you want the temperature as Fahrenheit uncomment the line below (isFahrenheit = true)
-  //float f = dht.readTemperature(true);
+  // If you want the temperature as Fahrenheit uncomment the line below (isFahrenheit = true)
+  // float f = dht.readTemperature(true);
 
-  //check if any reads failed and exit early (to try again).
+  // check if any reads failed and exit early (to try again).
   if (isnan(h) || isnan(t)) {
     Serial.println("Failed to read from DHT sensor :(");
     return;
   }
 
   /*
-  print humidity and temperature readings to the screen.
+   print humidity and temperature readings to the screen.
   */
 
   // humidity goes on one line.
   Serial.print("Humidity: ");
   Serial.print(h);
   Serial.println("%");
-  //temperature goes on the next line.
+  // temperature goes on the next line.
   Serial.print("Temp: ");
   Serial.print(t);
   Serial.println("*C   ");
-  //separate each set of readings with a empty line.
+  // separate each set of readings with a empty line.
   Serial.println("");
 }

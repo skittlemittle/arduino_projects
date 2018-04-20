@@ -1,4 +1,4 @@
-//Turns a servo based on readings from an analog sensor.
+// Turns a servo based on readings from an analog sensor.
 
 #include <Servo.h>
 

@@ -26,7 +26,7 @@ const int trigger = 12;
 const int echo = 11;
 
 /*
-function used to make the robot back up and then turn left
+ function used to make the robot back up and then turn left
 */
 void backLeft() {
   // back up for a second
@@ -56,7 +56,7 @@ void backLeft() {
 }
 
 /*
-function used to make the robot back up and then turn right
+ function used to make the robot back up and then turn right
 */
 void backRight() {
   // back up for a second
@@ -134,7 +134,7 @@ void loop() {
 }
 
 /*
-function that converts the ping time reading to distance
+ function that converts the ping time reading to distance
 */
 long microsecondsToCentimeters(long microseconds)
 {

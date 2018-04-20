@@ -45,7 +45,7 @@ void loop() {
   long lDuration, lCm; // used to calculate distance for left sensor
 
   /*
-  send a ping on the right sensor
+   send a ping on the right sensor
   */
   digitalWrite(rTrig, LOW); // pull it low for a clean ping
   delayMicroseconds(2);
@@ -59,7 +59,7 @@ void loop() {
   rCm = microsecondsToCentimeters(rDuration);
 
  /*
-  send a ping on the left sensor
+   send a ping on the left sensor
   */
   digitalWrite(lTrig, LOW); // pull it low for a clean ping
   delayMicroseconds(2);
@@ -73,7 +73,7 @@ void loop() {
   lCm = microsecondsToCentimeters(lDuration);
 
   /*
-  send a ping on the middle sensor
+   send a ping on the middle sensor
   */
   digitalWrite(mTrig, LOW); // pull it low for a clean ping
   delayMicroseconds(2);
@@ -87,7 +87,7 @@ void loop() {
   mCm = microsecondsToCentimeters(mDuration);
 
   /*
-    turn on the right buzzer if it sees anything 
+   turn on the right buzzer if it sees anything 
   */
   if ((rCm > 1) and (rCm < 100)) { // ignore stuff closer than 1 cm and further than 100 cm.
     digitalWrite(rBuzz, HIGH);
@@ -99,7 +99,7 @@ void loop() {
   }
 
   /*
-    turn on the left buzzer if it sees anything 
+   turn on the left buzzer if it sees anything 
   */
   if ((lCm > 1) and (lCm < 100)) { // ignore stuff closer than 1 cm and further than 100 cm.
     digitalWrite(lBuzz, HIGH);
@@ -111,7 +111,7 @@ void loop() {
   }  
 
   /*
-    turn on the middle buzzer if it sees anything 
+   turn on the middle buzzer if it sees anything 
   */
   if ((mCm > 1) and (mCm < 100)) { // ignore stuff closer than 1 cm and further than 100 cm.
     digitalWrite(mBuzz, HIGH);
@@ -125,7 +125,7 @@ void loop() {
 
 
 /*
-function that converts the ping time reading to distance
+ function that converts the ping time reading to distance
 */
 long microsecondsToCentimeters(long microseconds) {
   // The speed of sound is 340 m/s or 29 microseconds per centimeter.
