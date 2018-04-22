@@ -86,8 +86,6 @@ void loop() {
   }
 
 
-  // Loop here getting pressure readings every 10 seconds.
-
   // If you want sea-level-compensated pressure, as used in weather reports,
   // you will need to know the altitude at which your measurements are taken.
   // We're using a constant called ALTITUDE in this sketch:
@@ -143,7 +141,7 @@ void loop() {
           delay(3000);
           lcd.clear();
 
-          // The pressure sensor returns abolute pressure, which varies with altitude.
+          // The pressure sensor returns absolute pressure, which varies with altitude.
           // To remove the effects of altitude, use the sealevel function and your current altitude.
           // This number is commonly used in weather reports.
           // Parameters: P = absolute pressure in mb, ALTITUDE = current altitude in m.
