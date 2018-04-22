@@ -21,8 +21,8 @@
 const int rain = 8;
 const int light = A0;
 
-int rval; // used to read the rain sensor
-int lval; // used to read the LDR
+int rval; // used to store the readings from the rain sensor
+int lval; // used to store the readings from the LDR
 
 // set the sensor and LCD pins
 #define DHTPIN 7
@@ -81,7 +81,7 @@ void loop() {
 
   // check if any reads failed and exit early (to try again).
   if (isnan(h) || isnan(t)) {
-    lcd.print("Failed to read from DHT sensor :(");
+    Serial.println("Failed to read from DHT sensor :(");
     return;
   }
 
