@@ -1,6 +1,6 @@
 /*
- A cap that beeps buzzers or provides haptic feedback based on how far objects are from it.
- It uses three ultrasonic rangefinders on the rim of the cap to tell how far stuff is from it.
+ A hat that beeps buzzers or provides haptic feedback based on how far objects are from it.
+ It uses three ultrasonic rangefinders on the rim of the cap to tell figure out how far stuff is from it.
  This codes github repo: https://github.com/afshaan4/other_arduino_projects
 */
 
@@ -14,7 +14,7 @@ const int mEcho = 9;
 
 // Left rangefinder
 const int lTrig = 8;
-const int lEcho = 7;
+const int lEcho = 6;
 
 // The feedback devices (buzzers or vibration motors)
 const int rBuzz = 5;
