@@ -1,6 +1,6 @@
 # Arduino Projects
-The code for Arduino projects, made to be used in a Arduino beginner course.
-These projects range from blinking an LED to making robots and a weather station.
+The code for Arduino projects, made to be used in a Arduino course.
+These projects range from blinking an LED to making robots and weather stations.
 
 Wiring guides and full explanations are [here](https://aaalearn.mystagingwebsite.com/2018/03/arduino-camp/) and [here](https://aaalearn.mystagingwebsite.com/2018/04/arduino-summer-camp-middle-school/)
 
@@ -17,15 +17,18 @@ Wiring guides and full explanations are [here](https://aaalearn.mystagingwebsite
  * [DHT sensor library](https://github.com/adafruit/DHT-sensor-library)
  * [BMP180 library](https://github.com/sparkfun/BMP180_Breakout_Arduino_Library)
 
-**If you dont have Git**
+**If you don't have Git**
 
 * Download this repository as a zip from [here](https://github.com/afshaan4/other_arduino_projects)
+* Extract it wherever you want.
 
 * Download the librariaries as zips from here:
 
  * [LiquidCrystal](https://github.com/arduino-libraries/LiquidCrystal)
  * [DHT sensor library](https://github.com/adafruit/DHT-sensor-library)
  * [BMP180 library](https://github.com/sparkfun/BMP180_Breakout_Arduino_Library)
+
+* Extract the libraries into the *Arduino/libraries* folder.
 
 ### Licensing stuff
 
