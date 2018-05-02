@@ -8,7 +8,7 @@ Wiring guides and full explanations are [here](https://aaalearn.mystagingwebsite
 * Install the Arduino IDE, you can use [this guide](https://learn.sparkfun.com/tutorials/installing-arduino-ide).
 
  **If you have Git**
- 
+
 * Clone this repository `git clone https://github.com/afshaan4/other_arduino_projects.git`
 
 * Install these libraries by cloning them into the `Arduino/libraries` folder:
@@ -33,6 +33,6 @@ Wiring guides and full explanations are [here](https://aaalearn.mystagingwebsite
 ### Licensing stuff
 
 All the code and documentation in this repository is licensed under the MIT license,
-which you should have received with this, to see the exact terms of the license
-read the "LICENSE" file, if you didn't receive the license you can view it
-[here.](https://github.com/afshaan4/other_arduino_projects/blob/master/LICENSE)
+to see the exact terms of the license read the "LICENSE" file,
+you should have received a copy of the license with this,  if you didn't
+receive the license you can view it [here.](https://github.com/afshaan4/other_arduino_projects/blob/master/LICENSE)
