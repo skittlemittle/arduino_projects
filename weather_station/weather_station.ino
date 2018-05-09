@@ -1,4 +1,4 @@
-/* 
+/*
   An Arduino weather station, using:
   * A BMP180 barometer.
   * A DHT11 temperature and humidity sensor.
@@ -9,8 +9,10 @@
   The sensor readings are sent to the LCD
   and debugging stuff is sent to a computer over serial
 
-  For wiring diagrams and stuff visit: 
+  For wiring diagrams and stuff visit: https://aaalearn.mystagingwebsite.com/2018/04/weather-station/
   this codes repo: https://github.com/afshaan4/other_arduino_projects
+
+  This code is licensed under the MIT license: https://mit-license.org/
 */
 
 #include "DHT.h"
@@ -89,14 +91,14 @@ void loop() {
   // If you want sea-level-compensated pressure, as used in weather reports,
   // you will need to know the altitude at which your measurements are taken.
   // We're using a constant called ALTITUDE in this sketch:
-  
+
   lcd.print("given alt: ");
   lcd.print(ALTITUDE,0);
   lcd.print("m");
   lcd.setCursor(0, 1);
-  
+
   // You must first get a temperature measurement to perform a pressure reading.
-  
+
   // Start a temperature measurement:
   // If request is successful, the number of ms to wait is returned.
   // If request is unsuccessful, 0 is returned.

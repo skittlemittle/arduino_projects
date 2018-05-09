@@ -7,6 +7,11 @@
  If the right sensor is on the line        > turn right
  If both the sensors are on the line       > stop
  If neither of the sensors are on the line > go forward
+
+ This codes github repo: https://github.com/afshaan4/other_arduino_projects
+ wiring diagrams and assembly guides can be found here: https://aaalearn.mystagingwebsite.com/2018/04/line-follower/
+
+ This code is licensed under the MIT license: https://mit-license.org/
 */
 
 // the left and right IR sensors

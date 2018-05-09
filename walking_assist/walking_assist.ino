@@ -4,7 +4,7 @@
  This codes github repo: https://github.com/afshaan4/other_arduino_projects
 */
 
-// Right rangefinder 
+// Right rangefinder
 const int rTrig = 12;
 const int rEcho = 11;
 
@@ -58,7 +58,7 @@ void loop() {
   // convert the time it takes into centimeters
   rCm = microsecondsToCentimeters(rDuration);
 
- /*
+  /*
    send a ping on the left sensor
   */
   digitalWrite(lTrig, LOW); // pull it low for a clean ping
@@ -86,8 +86,9 @@ void loop() {
   // convert the time it takes into centimeters
   mCm = microsecondsToCentimeters(mDuration);
 
+
   /*
-   turn on the right buzzer if it sees anything 
+   turn on the right buzzer if it sees anything
   */
   if ((rCm > 1) and (rCm < 100)) { // ignore stuff closer than 1 cm and further than 100 cm.
     digitalWrite(rBuzz, HIGH);
@@ -99,7 +100,7 @@ void loop() {
   }
 
   /*
-   turn on the left buzzer if it sees anything 
+   turn on the left buzzer if it sees anything
   */
   if ((lCm > 1) and (lCm < 100)) { // ignore stuff closer than 1 cm and further than 100 cm.
     digitalWrite(lBuzz, HIGH);
@@ -108,10 +109,10 @@ void loop() {
     delay(lCm * 10);
     Serial.print(lCm);
     Serial.println("lCm");
-  }  
+  }
 
   /*
-   turn on the middle buzzer if it sees anything 
+   turn on the middle buzzer if it sees anything
   */
   if ((mCm > 1) and (mCm < 100)) { // ignore stuff closer than 1 cm and further than 100 cm.
     digitalWrite(mBuzz, HIGH);

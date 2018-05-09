@@ -10,6 +10,8 @@
 
  wiring diagrams and assembly guides can be found here: https://aaalearn.mystagingwebsite.com/2018/03/arduino-camp/
  this codes repo: https://github.com/afshaan4/other_arduino_projects
+
+ This code is licensed under the MIT license: https://mit-license.org/
 */
 
 long randNumber; // used to store the random number
