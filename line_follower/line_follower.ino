@@ -1,7 +1,7 @@
 /*
  A simple line follower using 2 IR sensors
 
- The logic used here is simple:
+ The line following logic:
 
  If the left sensor is on the line         > turn left
  If the right sensor is on the line        > turn right
@@ -38,8 +38,8 @@ void setup() {
 	pinMode(a2, OUTPUT);
 	pinMode(b1, OUTPUT);
 	pinMode(b2, OUTPUT);
-	// for debugging
-	Serial.begin(9600);
+	// uncomment the lines with "Serial" for debugging
+	// Serial.begin(9600);
 }
 
 void loop() {
@@ -52,6 +52,7 @@ void loop() {
 		digitalWrite(a2, LOW);
 		digitalWrite(b1, HIGH);
 		digitalWrite(b2, LOW);
+		//Serial.println("No line");
 	}
 
 	// if the left sensor is on the line, turn left
@@ -60,6 +61,7 @@ void loop() {
 		digitalWrite(a2, LOW);
 		digitalWrite(b1, LOW);
 		digitalWrite(b2, LOW);
+		// Serial.println("line to the left");
 	}
 
 	// if the right sensor is on the line, turn right
@@ -68,6 +70,7 @@ void loop() {
 		digitalWrite(a2, LOW);
 		digitalWrite(b1, HIGH);
 		digitalWrite(b2, LOW);
+		// Serial.println("line to the right");
 	}
 
 	// if both sensors are on the line, stop
@@ -76,5 +79,6 @@ void loop() {
 		digitalWrite(a2, LOW);
 		digitalWrite(b1, LOW);
 		digitalWrite(b2, LOW);
+		// Serial.println("Both sensors see a line, motors stopped");
 	}
 }
